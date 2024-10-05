@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace sysiport.Controllers
+namespace sysiport_api.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class SysiportController : ControllerBase
     {
-
     }
 }
