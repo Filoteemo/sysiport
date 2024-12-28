@@ -1,12 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using SysiportData;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
+builder.Services.AddDbContext<SysiportDbContext>(opt =>
+{
+    opt.UseInMemoryDatabase("SysiPortDB");
+});
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
 

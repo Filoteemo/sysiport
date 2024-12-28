@@ -8,6 +8,6 @@ public class Team
     public string Name { get; set; } = string.Empty;
     public DateTime Created { get; set; }
     public DateTime Updated { get; set; }
-    public ICollection<User>? Users { get; set; }
-    public ICollection<Project>? Projects { get; set; }
+    public ICollection<User>? Users { get; set; } = [];
+    public ICollection<Project>? Projects { get; set; } = [];
 }
